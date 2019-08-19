@@ -24,7 +24,7 @@ RUN yum-config-manager --disable epel >/dev/null || : && \
     yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS && \
     yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     yum install -y https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm && \
-    yum install -y --setopt=tsflags=nodocs qt5-qtbase-common-5.9.2 qt5-qtbase-gui-5.9.2 qt5-qtbase-5.9.2 qt5-qtdeclarative-5.9.2 qt5-rpm-macros-5.9.2 qt5-qtxmlpatterns-5.9.2 qt5-qtbase-devel-5.9.2 qt5-qtdeclarative-devel-5.9.2 qt5-qtwebkit-devel && \
+    yum install -y --setopt=tsflags=nodocs qt5-qtbase-common-5.9.2 qt5-qtbase-gui-5.9.2 qt5-qtbase-5.9.2 qt5-qtdeclarative-5.9.2 qt5-rpm-macros-5.9.2 qt5-qtlocation-5.9.2 qt5-qtsensors-5.9.2 qt5-qtwebchannel-5.9.2 qt5-qtxmlpatterns-5.9.2 qt5-qtbase-devel-5.9.2 qt5-qtdeclarative-devel-5.9.2 qt5-qtwebkit-devel && \
     rpm -V $INSTALL_PKGS && \
     yum clean all -y && \
     systemd-machine-id-setup && \
