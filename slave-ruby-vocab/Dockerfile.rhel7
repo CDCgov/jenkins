@@ -37,7 +37,7 @@ RUN yum-config-manager --disable epel >/dev/null || : && \
     chgrp -R root /opt/rh/rh-ruby25/root/usr/{bin,lib64/gems,share/gems} && \
     chmod -R g+rw /opt/rh/rh-ruby25/root/usr/{bin,lib64/gems,share/gems} && \
     curl -L https://github.com/yarnpkg/yarn/releases/download/v$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz | \
-      tar-C /opt -zx && \
+      tar -C /opt -zx && \
     ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/bin/yarn && \
     curl -O -L https://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip && \
     unzip chromedriver_linux64.zip -d /opt && \
